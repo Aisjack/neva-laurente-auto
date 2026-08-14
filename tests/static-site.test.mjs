@@ -15,6 +15,7 @@ test("contains the complete static sales experience", async () => {
   assert.equal((html.match(/class="contact-method(?: contact-method-viber)?"/g) ?? []).length, 3);
   assert.match(html, /<option>Mitsubishi Xforce<\/option>/);
   assert.match(html, /assets\/icons\/viber\.svg/);
+  assert.match(html, /assets\/icons\/nav-logo-black\.svg/);
   assert.match(html, /<h1>YOUR NEXT DRIVE/);
   assert.match(html, /id="vehicles"/);
   assert.match(html, /Mitsubishi Xforce/);
@@ -35,6 +36,7 @@ test("all local production assets exist", async () => {
     "assets/css/styles.css",
     "assets/js/main.js",
     "assets/icons/viber.svg",
+    "assets/icons/nav-logo-black.svg",
     "assets/images/mitsubishi-xforce.webp",
     "assets/images/mitsubishi-montero-sport.webp",
     "assets/images/mitsubishi-xpander-cross.webp",

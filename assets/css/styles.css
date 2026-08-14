@@ -37,6 +37,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .header-inner { height: 100%; display: flex; align-items: center; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 200px; }
 .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; background: var(--red); color: #fff; font-size: 14px; font-weight: 900; letter-spacing: -.04em; }
+.brand-mark-logo { width: 50px; height: 50px; background: transparent; }
+.brand-mark-logo img { width: 100%; height: 100%; display: block; object-fit: contain; }
 .brand-copy { display: grid; gap: 2px; }
 .brand-copy strong { font-size: 14px; letter-spacing: .09em; }
 .brand-copy small { color: #777; font-size: 8px; letter-spacing: .22em; font-weight: 700; }
@@ -174,7 +176,7 @@ blockquote footer { margin-top: auto; padding-top: 24px; display: grid; border-t
 }
 
 @media (max-width: 620px) {
-  :root { --shell: calc(100% - 24px); }.site-header { height: 68px; }.section-nav { top: 68px; height: 44px; }.brand-mark { width: 38px; height: 38px; }.brand-copy strong { font-size: 12px; }.section-nav a { font-size: 8px; }
+  :root { --shell: calc(100% - 24px); }.site-header { height: 68px; }.section-nav { top: 68px; height: 44px; }.brand-mark { width: 38px; height: 38px; }.brand-mark-logo { width: 46px; height: 46px; }.brand-copy strong { font-size: 12px; }.section-nav a { font-size: 8px; }
   .hero { min-height: calc(100svh - 112px); }.hero-content { min-height: calc(100svh - 112px); padding-block: 18px 28px; }.hero-copy { padding-top: 14vh; }.breadcrumb { max-width: 260px; line-height: 1.5; }.hero h1 { font-size: clamp(48px,15vw,76px); }.hero-lede { margin: 23px 0; font-size: 14px; }.hero-actions { display: grid; grid-template-columns: 1fr; }.hero-price { width: 100%; margin-top: 36px; }.button { width: 100%; }.statement h2,.section-head h2,.services h2,.testimonials h2,.contact h2 { font-size: 45px; }
   .experience-badge { width: 118px; height: 118px; right: -5px; bottom: 22px; padding: 18px; }.experience-badge strong { font-size: 38px; }.about-copy h2 { font-size: 70px; }.trust-row strong { font-size: 21px; }.trust-row span { font-size: 8px; }.trust-row div { padding-left: 10px; }
   .section-head,.testimonials-head { align-items: start; flex-direction: column; }.vehicle-body { padding: 20px; }.spec-row span { font-size: 8px; }.services-grid { gap: 60px; }.service-list article { grid-template-columns: 36px 1fr 22px; }.feature-photo { min-height: 320px; }.feature-copy { padding: 60px 24px; }.rating > strong { font-size: 54px; }.form-row { grid-template-columns: 1fr; gap: 0; }.lead-form { padding: 26px 20px; }.footer-top { grid-template-columns: 1fr 1fr; gap: 42px 25px; }.footer-top > div:first-child { grid-column: 1/-1; }.footer-top > div:last-child { display: flex; }.footer-bottom { padding-block: 22px; align-items: start; flex-direction: column; }
