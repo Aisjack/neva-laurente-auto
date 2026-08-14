@@ -15,7 +15,7 @@ test("contains the complete static sales experience", async () => {
   assert.equal((html.match(/class="contact-method(?: contact-method-viber)?"/g) ?? []).length, 3);
   assert.match(html, /<option>Mitsubishi Xforce<\/option>/);
   assert.match(html, /assets\/icons\/viber\.svg/);
-  assert.match(html, /assets\/icons\/mitsubishi-emblem\.svg/);
+  assert.match(html, /assets\/icons\/nav-logo-black\.svg/);
   assert.match(html, /<h1>YOUR NEXT DRIVE/);
   assert.match(html, /id="vehicles"/);
   assert.match(html, /Mitsubishi Xforce/);
@@ -26,7 +26,7 @@ test("contains the complete static sales experience", async () => {
   assert.match(html, /id="services"/);
   assert.match(html, /id="testimonials"/);
   assert.match(html, /id="lead-form"/);
-  assert.match(html, /assets\/css\/styles\.css/);
+  assert.match(html, /assets\/css\/styles\.css\?v=20260814-3/);
   assert.match(html, /assets\/js\/main\.js/);
   assert.doesNotMatch(html, /images\.unsplash\.com|chatgpt\.site|vinext/i);
 });
@@ -36,7 +36,7 @@ test("all local production assets exist", async () => {
     "assets/css/styles.css",
     "assets/js/main.js",
     "assets/icons/viber.svg",
-    "assets/icons/mitsubishi-emblem.svg",
+    "assets/icons/nav-logo-black.svg",
     "assets/images/mitsubishi-xforce.webp",
     "assets/images/mitsubishi-montero-sport.webp",
     "assets/images/mitsubishi-xpander-cross.webp",
@@ -55,6 +55,7 @@ test("static code has responsive and accessible behavior", async () => {
 
   assert.match(css, /@media \(max-width: 620px\)/);
   assert.match(css, /images\/mitsubishi-xforce\.webp/);
+  assert.match(css, /\.brand-mark-logo \{[^}]*overflow: hidden/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /focus-visible/);
   assert.match(js, /aria-expanded/);
