@@ -16,7 +16,8 @@ test("contains the complete static sales experience", async () => {
   assert.match(html, /<option>Mitsubishi Xforce<\/option>/);
   assert.match(html, /assets\/icons\/viber\.svg/);
   assert.match(html, /assets\/icons\/nav-logo-black\.svg/);
-  assert.match(html, /<h1>YOUR NEXT DRIVE/);
+  assert.match(html, /<h1>DRIVE YOUR DREAM/);
+  assert.match(html, /Get the latest Mitsubishi models with competitive offers and personalized financing assistance\./);
   assert.match(html, /id="vehicles"/);
   assert.match(html, /Mitsubishi Xforce/);
   assert.match(html, /rel="preload" as="image" href="assets\/images\/mitsubishi-xforce\.webp"/);
