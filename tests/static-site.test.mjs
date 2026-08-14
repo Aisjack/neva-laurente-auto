@@ -60,12 +60,16 @@ test("static code has responsive and accessible behavior", async () => {
 });
 
 test("includes Cloudflare Pages build and security configuration", async () => {
-  const [packageJson, headers] = await Promise.all([
+  const [packageJson, headers, workflow] = await Promise.all([
     readFile(new URL("package.json", root), "utf8"),
     readFile(new URL("_headers", root), "utf8"),
+    readFile(new URL(".github/workflows/deploy-cloudflare-pages.yml", root), "utf8"),
   ]);
 
   assert.match(packageJson, /"build": "node scripts\/build\.mjs"/);
   assert.match(headers, /Content-Security-Policy:/);
   assert.match(headers, /X-Content-Type-Options: nosniff/);
+  assert.match(workflow, /pages deploy dist --project-name=neva-laurente-auto --branch=main/);
+  assert.match(workflow, /CLOUDFLARE_API_TOKEN/);
+  assert.match(workflow, /CLOUDFLARE_ACCOUNT_ID/);
 });

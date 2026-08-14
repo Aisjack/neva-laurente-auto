@@ -41,3 +41,14 @@ In the Pages project, open **Custom domains**, add the chosen domain, and follow
 ## Important
 
 The current contact form is a front-end demonstration. Hosting it does not make submissions reach an inbox. Add the planned Cloudflare Worker lead API, spam protection, consent recording, and email delivery before treating it as a live lead form.
+
+## Automatic deployment from GitHub
+
+This repository includes `.github/workflows/deploy-cloudflare-pages.yml`. It builds, tests, and deploys the Pages project whenever a commit is pushed to `main`.
+
+Add these repository secrets under **GitHub → Settings → Secrets and variables → Actions**:
+
+- `CLOUDFLARE_ACCOUNT_ID` — the Account ID shown in the Cloudflare dashboard.
+- `CLOUDFLARE_API_TOKEN` — a Cloudflare API token with permission to edit Cloudflare Pages for the selected account.
+
+After both secrets are added, push the workflow to `main` and monitor it under the repository's **Actions** tab.
