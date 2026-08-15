@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Mitsubishi Xforce",
+    "category": "Compact crossover",
+    "badge": "BRAND NEW",
+    "price": 1119000,
+    "price_prefix": "From",
+    "image": "/assets/images/mitsubishi-xforce.webp",
+    "image_alt": "White Mitsubishi Xforce compact crossover on a city road",
+    "specs": ["1.5L Gasoline", "CVT", "5 Seats"],
+    "available": true
+  },
+  {
+    "name": "L300 DUAL AC MT",
+    "category": "LCV",
+    "badge": "BEST VALUE",
+    "price": 1038380,
+    "price_prefix": "From",
+    "image": "/assets/images/mitsubishi-L300.webp",
+    "image_alt": "White Mitsubishi L300 commercial vehicle",
+    "specs": ["2.2L Diesel", "5MT", "3 Seats"],
+    "available": true
+  },
+  {
+    "name": "Mitsubishi Xpander Cross",
+    "category": "7-seat crossover",
+    "badge": "FAMILY FAVORITE",
+    "price": 1378000,
+    "price_prefix": "From",
+    "image": "/assets/images/mitsubishi-xpander-cross.webp",
+    "image_alt": "Mitsubishi Xpander Cross on a mountain road",
+    "specs": ["1.5L Gasoline", "4AT", "7 Seats"],
+    "available": true
+  },
+  {
+    "name": "Mitsubishi Triton",
+    "category": "Pickup truck",
+    "badge": "READY FOR WORK",
+    "price": 1266000,
+    "price_prefix": "From",
+    "image": "/assets/images/mitsubishi-triton.webp",
+    "image_alt": "Orange Mitsubishi Triton pickup driving through desert terrain",
+    "specs": ["2.4L Diesel", "6MT / 6AT", "5 Seats"],
+    "available": true
+  }
+]

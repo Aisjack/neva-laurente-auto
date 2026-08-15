@@ -3,9 +3,10 @@ import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+const output = new URL("../dist/", import.meta.url);
 
 test("contains the complete static sales experience", async () => {
-  const html = await readFile(new URL("index.html", root), "utf8");
+  const html = await readFile(new URL("index.html", output), "utf8");
 
   assert.match(html, /<title>Neva Laurente \| Marketing Professional<\/title>/);
   assert.match(html, /Mitsubishi Union Motor Inc/);
@@ -20,7 +21,7 @@ test("contains the complete static sales experience", async () => {
   assert.match(html, /Get the latest Mitsubishi models with competitive offers and personalized financing assistance\./);
   assert.match(html, /id="vehicles"/);
   assert.match(html, /Mitsubishi Xforce/);
-  assert.match(html, /rel="preload" as="image" href="assets\/images\/mitsubishi-xforce\.webp"/);
+  assert.match(html, /rel="preload" as="image" href="\/assets\/images\/mitsubishi-xforce\.webp"/);
   assert.match(html, /Mitsubishi Montero Sport/);
   assert.match(html, /Mitsubishi Xpander Cross/);
   assert.match(html, /Mitsubishi Triton/);
@@ -29,7 +30,7 @@ test("contains the complete static sales experience", async () => {
   assert.match(html, /id="lead-form"/);
   assert.match(html, /assets\/css\/styles\.css\?v=20260814-3/);
   assert.match(html, /assets\/js\/main\.js/);
-  assert.doesNotMatch(html, /images\.unsplash\.com|chatgpt\.site|vinext/i);
+  assert.doesNotMatch(html, /images\.unsplash\.com|chatgpt\.site|vinext|\{\{/i);
 });
 
 test("all local production assets exist", async () => {
@@ -45,7 +46,7 @@ test("all local production assets exist", async () => {
     "assets/images/og-neva.png",
   ];
 
-  await Promise.all(paths.map((path) => access(new URL(path, root))));
+  await Promise.all(paths.map((path) => access(new URL(path, output))));
 });
 
 test("static code has responsive and accessible behavior", async () => {
@@ -76,4 +77,20 @@ test("includes Cloudflare Pages build and security configuration", async () => {
   assert.match(workflow, /pages deploy dist --project-name=neva-laurente-auto --branch=main/);
   assert.match(workflow, /CLOUDFLARE_API_TOKEN/);
   assert.match(workflow, /CLOUDFLARE_ACCOUNT_ID/);
+});
+
+test("includes Pages CMS content models and build-time rendering", async () => {
+  const [cmsConfig, siteContent, vehicleContent, buildScript] = await Promise.all([
+    readFile(new URL(".pages.yml", root), "utf8"),
+    readFile(new URL("content/site.json", root), "utf8"),
+    readFile(new URL("content/vehicles.json", root), "utf8"),
+    readFile(new URL("scripts/build.mjs", root), "utf8"),
+  ]);
+
+  assert.match(cmsConfig, /label: Vehicles and prices/);
+  assert.match(cmsConfig, /path: content\/vehicles\.json/);
+  assert.match(cmsConfig, /input: assets\/images/);
+  assert.match(siteContent, /"full_name": "Neva Laurente"/);
+  assert.match(vehicleContent, /"price": 1119000/);
+  assert.match(buildScript, /formatPrice/);
 });

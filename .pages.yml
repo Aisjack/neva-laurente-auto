@@ -1,0 +1,124 @@
+media:
+  input: assets/images
+  output: /assets/images
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: site
+    label: Site content
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: representative
+        label: Representative
+        type: object
+        fields:
+          - { name: full_name, label: Full name, type: string, required: true }
+          - { name: first_name, label: First name, type: string, required: true }
+          - { name: professional_title, label: Professional title, type: string, required: true }
+          - { name: years_experience, label: Years of experience, type: number, required: true }
+          - { name: dealership_name, label: Dealership, type: string, required: true }
+          - { name: dealership_location, label: Location, type: string, required: true }
+          - { name: phone_display, label: Phone shown on site, type: string, required: true }
+          - { name: phone_link, label: Phone link in international format, type: string, required: true }
+          - { name: email, label: Email, type: string, required: true }
+          - { name: viber_display, label: Viber shown on site, type: string, required: true }
+          - { name: viber_link, label: Viber link in international format, type: string, required: true }
+          - { name: bio_primary, label: Biography paragraph 1, type: text, required: true }
+          - { name: bio_secondary, label: Biography paragraph 2, type: text, required: true }
+          - { name: portrait_image, label: Portrait image, type: image, required: false }
+      - name: hero
+        label: Hero section
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: headline_primary, label: Headline first line, type: string, required: true }
+          - { name: headline_accent, label: Headline accent line, type: string, required: true }
+          - { name: description, label: Description, type: text, required: true }
+          - { name: image, label: Hero image, type: image, required: true }
+          - { name: image_alt, label: Hero image description, type: string, required: true }
+          - { name: price_label, label: Price label, type: string, required: true }
+          - { name: price, label: Featured price text, type: string, required: true }
+          - { name: price_note, label: Price note, type: string, required: true }
+      - name: inventory
+        label: Inventory section
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: headline, label: Headline, type: string, required: true }
+          - { name: description, label: Description, type: text, required: true }
+          - { name: disclaimer, label: Price disclaimer, type: text, required: true }
+      - name: contact
+        label: Contact section
+        type: object
+        fields:
+          - { name: headline, label: Headline, type: string, required: true }
+          - { name: description, label: Description, type: text, required: true }
+          - { name: business_hours, label: Business hours, type: text, required: true }
+          - { name: sunday_hours, label: Sunday hours, type: string, required: true }
+
+  - name: vehicles
+    label: Vehicles and prices
+    type: file
+    path: content/vehicles.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Vehicle name, type: string, required: true }
+      - { name: category, label: Category, type: string, required: true }
+      - { name: badge, label: Badge, type: string, required: true }
+      - { name: price, label: Price in pesos, type: number, required: true }
+      - { name: price_prefix, label: Price prefix, type: string, required: true }
+      - { name: image, label: Vehicle image, type: image, required: true }
+      - { name: image_alt, label: Image description, type: string, required: true }
+      - name: specs
+        label: Specifications
+        type: string
+        list: { min: 1, max: 4 }
+      - { name: available, label: Show on website, type: boolean, required: true }
+
+  - name: services
+    label: Services
+    type: file
+    path: content/services.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Service name, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+
+  - name: advantages
+    label: Advantages
+    type: file
+    path: content/advantages.json
+    format: json
+    list: true
+    fields:
+      - { name: label, label: Short label, type: string, required: true }
+      - { name: headline, label: Headline, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: image, label: Image, type: image, required: true }
+      - { name: image_alt, label: Image description, type: string, required: true }
+
+  - name: testimonials
+    label: Testimonials
+    type: file
+    path: content/testimonials.json
+    format: json
+    list: true
+    fields:
+      - { name: quote, label: Testimonial, type: text, required: true }
+      - { name: customer, label: Customer name, type: string, required: true }
+      - { name: vehicle, label: Vehicle, type: string, required: true }
+      - { name: location, label: Location, type: string, required: true }
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      update: "content: update {path}"
+      create: "content: add {path}"
+      delete: "content: remove {path}"

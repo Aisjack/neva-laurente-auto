@@ -1,0 +1,41 @@
+{
+  "representative": {
+    "full_name": "Neva Laurente",
+    "first_name": "Neva",
+    "professional_title": "Marketing Professional",
+    "years_experience": 8,
+    "dealership_name": "Mitsubishi Union Motor Inc",
+    "dealership_location": "Metro Manila",
+    "phone_display": "0991 824 7900",
+    "phone_link": "+639918247900",
+    "email": "shifttofunny@gmail.com",
+    "viber_display": "0997 067 8858",
+    "viber_link": "+639970678858",
+    "bio_primary": "I'm a Marketing Professional with eight years of experience helping busy professionals and growing families choose vehicles with confidence. I focus on practical Mitsubishi crossovers and SUVs that work as hard on weekdays as they do on weekends.",
+    "bio_secondary": "Representing Mitsubishi Union Motor Inc in Metro Manila, I combine product knowledge with responsive, genuinely personal service from inquiry through delivery.",
+    "portrait_image": ""
+  },
+  "hero": {
+    "eyebrow": "MITSUBISHI UNION MOTOR INC",
+    "headline_primary": "DRIVE YOUR DREAM",
+    "headline_accent": "MITSUBISHI TODAY",
+    "description": "Get the latest Mitsubishi models with competitive offers and personalized financing assistance.",
+    "image": "/assets/images/mitsubishi-xforce.webp",
+    "image_alt": "White Mitsubishi Xforce compact crossover driving through a modern city",
+    "price_label": "FEATURED CROSSOVERS",
+    "price": "FROM ₱1.119M",
+    "price_note": "Flexible financing options available"
+  },
+  "inventory": {
+    "eyebrow": "CURRENT HIGHLIGHTS",
+    "headline": "FEATURED VEHICLES.",
+    "description": "Featured Mitsubishi options for city driving, family life, and weekends away. Availability, variants, and final pricing are confirmed upon inquiry.",
+    "disclaimer": "Indicative Philippine SRP only; specifications, availability, promos, and final pricing are confirmed upon inquiry."
+  },
+  "contact": {
+    "headline": "LET'S FIND YOUR NEXT DRIVE.",
+    "description": "Tell me what you have in mind. I'll reply with clear next steps and options tailored to you.",
+    "business_hours": "Mon–Sat\n8:30 AM–6:00 PM",
+    "sunday_hours": "Sunday by appointment"
+  }
+}

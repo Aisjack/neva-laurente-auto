@@ -1,23 +1,35 @@
 # Automotive Sales Portfolio
 
-A responsive, static automotive sales representative website built with semantic HTML, modern CSS, and minimal vanilla JavaScript. It has no framework or server runtime and is ready for GitHub Pages.
+A responsive, static automotive sales representative website built with semantic HTML, modern CSS, and minimal vanilla JavaScript. Editable content is managed through Pages CMS and the production site is deployed to Cloudflare Pages.
 
 ## Preview locally
 
-Open `index.html` directly, or serve the project folder with any static web server.
+Build the generated website, then serve the `dist` directory with any static web server:
+
+```powershell
+& "C:\Program Files\nodejs\npm.cmd" run build
+& "C:\Program Files\nodejs\npx.cmd" serve dist
+```
 
 ## Customize
 
-1. Replace the sample name, biography, statistics, dealership affiliation, inventory, prices, testimonials, and contact details in `index.html`.
-2. Replace the photo placeholder and vehicle images in `assets/images/`.
-3. Update phone, email, Viber, and social links.
-4. Connect the lead form in `assets/js/main.js` to an approved static form service before launch.
-5. Update the Open Graph image and final production URLs.
+Use Pages CMS for routine content updates. The editable source files are stored under `content/`, and uploaded images are stored under `assets/images/`. Do not edit generated files in `dist/`.
+
+See `PAGES_CMS_SETUP.md` for the one-time client setup and publishing workflow.
+
+The lead form in `assets/js/main.js` is still a demonstration and must be connected to an approved form service before launch.
 
 ## Structure
 
 ```text
-index.html
+index.html                 # build template
+.pages.yml                # Pages CMS editing configuration
+content/
+  site.json
+  vehicles.json
+  services.json
+  advantages.json
+  testimonials.json
 assets/
   css/styles.css
   js/main.js
@@ -25,4 +37,4 @@ assets/
 tests/static-site.test.mjs
 ```
 
-Run `npm test` to verify the static structure and required assets.
+Run `npm test` to build and verify the static structure, CMS content, and required assets.

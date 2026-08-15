@@ -5,6 +5,6 @@
   "description": "Static Mitsubishi sales representative website prepared for Cloudflare Pages.",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/static-site.test.mjs"
+    "test": "node scripts/build.mjs && node --test tests/static-site.test.mjs"
   }
 }
