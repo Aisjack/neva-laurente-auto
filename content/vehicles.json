@@ -12,10 +12,10 @@
       "CVT",
       "5 Seats"
     ],
-    "available": true
+    "available": false
   },
   {
-    "name": "L300 DUAL AC MT",
+    "name": "L300 DUAL AC MT TEST",
     "category": "LCV",
     "badge": "BEST VALUE",
     "price": 1038380,
