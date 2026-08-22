@@ -1,10 +1,10 @@
 [
   {
-    "label": "BEST DEAL*",
-    "headline": "LOW DOWN PAYMENT -MORE FREEBIES*",
-    "description": "GREAT PROMO • LOW MONTHLY • LESS HASSLE*",
+    "label": "BEST DEAL",
+    "headline": "LOW DOWN PAYMENT -MORE FREEBIES",
+    "description": "GREAT PROMO • LOW MONTHLY • LESS HASSLE",
     "image": "/assets/images/brown-beige-minimalist-fall-leaves-photo-collage-facebook-post-1.png",
-    "image_alt": "Get your dream vehicle with low down payment plus exciting freebies!*"
+    "image_alt": "Get your dream vehicle with low down payment plus exciting freebies!"
   },
   {
     "label": "ONE DAY APPROVAL",
@@ -19,12 +19,5 @@
     "description": "Service reminders, ownership questions, and future upgrades—I stay available long after release day.",
     "image": "/assets/images/74142836617341089409141864360737507674668626n.jpg",
     "image_alt": "Because what gets you to work, to family, to life deserves extra protection with real savings!"
-  },
-  {
-    "label": "test",
-    "headline": "test",
-    "description": "test",
-    "image": "/assets/images/74142836617341089409141864360737507674668626n.jpg",
-    "image_alt": "test"
   }
 ]
