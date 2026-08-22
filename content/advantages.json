@@ -1,5 +1,23 @@
 [
-  {"label": "CLARITY", "headline": "ADVICE THAT FITS YOUR LIFE.", "description": "I translate specs, variants, and payment options into the things that actually matter to your daily drive.", "image": "/assets/images/mitsubishi-xforce.webp", "image_alt": "White Mitsubishi Xforce compact crossover on a city road"},
-  {"label": "ACCESS", "headline": "ONE MESSAGE. ONE ANSWER.", "description": "Get direct, timely updates from a person who knows your requirements—not a rotating inbox or call queue.", "image": "/assets/images/mitsubishi-montero-sport.webp", "image_alt": "Mitsubishi Montero Sport in a dramatic studio setting"},
-  {"label": "CARE", "headline": "SUPPORT BEYOND THE HANDOVER.", "description": "Service reminders, ownership questions, and future upgrades—I stay available long after release day.", "image": "/assets/images/mitsubishi-xpander-cross.webp", "image_alt": "Mitsubishi Xpander Cross on a mountain road"}
+  {
+    "label": "BEST DEAL",
+    "headline": "LOW DOWN PAYMENT -MORE FREEBIES",
+    "description": "GREAT PROMO • LOW MONTHLY • LESS HASSLE",
+    "image": "/assets/images/brown-beige-minimalist-fall-leaves-photo-collage-facebook-post-3.png",
+    "image_alt": "Get your dream vehicle with low down payment plus exciting freebies!"
+  },
+  {
+    "label": "ONE DAY APPROVAL",
+    "headline": "APPLY NOW - APPROVE LATER",
+    "description": "Start your application today - Fast application processing, hassle-free requirements, and quick approval assistance.",
+    "image": "/assets/images/brown-beige-minimalist-fall-leaves-photo-collage-facebook-post-2.png",
+    "image_alt": "We make your car-buying journey easier and faster. Submit your requirements, let us handle the application, and get an update on your financing as quickly as possible."
+  },
+  {
+    "label": "MITSUBISI CARE",
+    "headline": "SUPPORT BEYOND THE HANDOVER.",
+    "description": "Service reminders, ownership questions, and future upgrades—I stay available long after release day.",
+    "image": "/assets/images/74142836617341089409141864360737507674668626n.jpg",
+    "image_alt": "Because what gets you to work, to family, to life deserves extra protection with real savings!"
+  }
 ]
