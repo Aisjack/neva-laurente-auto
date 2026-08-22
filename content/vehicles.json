@@ -58,5 +58,18 @@
       "5 Seats"
     ],
     "available": true
+  },
+  {
+    "name": "test",
+    "category": "test",
+    "badge": "test",
+    "price": 22222,
+    "price_prefix": "test",
+    "image": "/assets/images/brown-beige-minimalist-fall-leaves-photo-collage-facebook-post-1.png",
+    "image_alt": "test",
+    "specs": [
+      "test"
+    ],
+    "available": true
   }
 ]
